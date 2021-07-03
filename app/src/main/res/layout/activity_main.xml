@@ -23,8 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ivAvatar"
             android:text="Hello World!"
-            android:textSize="25sp"/>
-
+            android:textSize="25sp" />
 
     </RelativeLayout>
 </LinearLayout>
