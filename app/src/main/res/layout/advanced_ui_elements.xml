@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitleFirstPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="online"
+        app:layout_constraintStart_toStartOf="@id/glBegin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleSecondPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SWIFTBOOK"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleFirstPart"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleFirstPart" />
+
+    <ImageView
+        android:id="@+id/ivCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintStart_toEndOf="@id/tvTitleSecondPart"
+        app:layout_constraintTop_toTopOf="@id/tvTitleFirstPart" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_close_large"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitleSecondPart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivCircle" />
+
+    <TextView
+        android:id="@+id/tvBasket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Корзина"
+        app:layout_constraintStart_toStartOf="@id/tvTitleSecondPart"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleSecondPart" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/decoration_white_round_line_16"
+        app:layout_constraintTop_toBottomOf="@id/tvBasket">
+
+        <ImageView
+            android:id="@+id/ivTomYam"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/drawble_tom_yam"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTomYam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Том Ям суп с морепродуктами"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/ivRemovePosition"
+            app:layout_constraintStart_toEndOf="@+id/ivTomYam"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCount001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:text="Кол-во: 2 шт"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTomYam" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/decoration_black_round_corners"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="450 ₽"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvCount001"
+            app:layout_constraintEnd_toEndOf="@id/tvTomYam" />
+
+        <ImageView
+            android:id="@+id/ivRemovePosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:src="@drawable/ic_close_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#A1A1A1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
